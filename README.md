@@ -4,6 +4,14 @@ CAS Registry Numbers (CAS RNs) are unique numerical identifiers assigned to chem
 
 This project contains the CasRN class I've written to validate CAS RNs by ensuring they're in the correct format and that they contains a valid check digit. It is demonstrated by a simple Console application.
 
+This is the output of the Console application:
+
+```
+58-08-2 is a valid CAS Registry Number.
+58-08-3 is not a valid CAS Registry Number because: incorrect check digit; expected 2.
+5808-3 is not a valid CAS Registry Number because: incorrect format.
+```
+
 I wrote this for C# 7.0 since it uses a Tuple to return the validation result and error message. It could be easily adapted to earlier versions with some minor changes.
 
 ## License
