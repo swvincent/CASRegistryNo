@@ -1,10 +1,10 @@
 # CAS Registry Number
 
-CAS Registry Numbers (CAS RNs) are unique numerical identifiers assigned to chemical substances. They are managed by the Chemical Abstracts Service.
+CAS Registry Numbers (CAS RNs) are unique numerical identifiers assigned to chemical substances. They are managed by the [Chemical Abstracts Service](https://www.cas.org/).
 
-This project demonstrates the CasRN class I've written to validate CAS RNs by ensuring they're in the correct format and that they contains a valid check digit.
+This project contains the CasRN class I've written to validate CAS RNs by ensuring they're in the correct format and that they contains a valid check digit. It is demonstrated by a simple Console application.
 
-It is written for C# 7.0 or higher since it uses a Tuple to return the validation result and error message. It could be easily adapted to earlier versions with some minor changes.
+I wrote this for C# 7.0 since it uses a Tuple to return the validation result and error message. It could be easily adapted to earlier versions with some minor changes.
 
 ## License
 
