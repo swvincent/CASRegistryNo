@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Copyright 2018 Scott W. Vincent
+// Shared under an MIT License - see LICENSE file for details
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

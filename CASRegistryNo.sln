@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CASRegistryNo", "CASRegistryNo\CASRegistryNo.csproj", "{3CBC50FC-7699-4494-BCEF-05E948C4CE6F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CASRegistryNo", "src\CASRegistryNo\CASRegistryNo.csproj", "{3CBC50FC-7699-4494-BCEF-05E948C4CE6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
