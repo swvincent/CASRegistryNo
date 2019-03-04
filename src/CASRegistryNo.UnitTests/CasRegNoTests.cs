@@ -16,11 +16,13 @@ namespace CASRegistryNo.UnitTests
         [Test]
         [TestCase("5808-2")]    // Wrong format
         [TestCase("58-08-3")]   // Bad checksum
+        [TestCase("")]          // No CAS registry number
         public void Validate_InvalidCasRegNo_ReturnsFalseAndErrorMessage(string casRegNo)
         {
             var result = CasRegNo.Validate(casRegNo);
 
-            Assert.That(!result.isValid && !string.IsNullOrWhiteSpace(result.errorMessage));
+            Assert.That(!result.isValid &&
+                !string.IsNullOrWhiteSpace(result.errorMessage));
         }
     }
 }
