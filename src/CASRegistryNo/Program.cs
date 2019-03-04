@@ -21,7 +21,7 @@ namespace CASRegistryNo
 
             foreach(var casRegNo in casRegNos)
             {
-                var result = CasRN.Validate(casRegNo);
+                var result = CasRegNo.Validate(casRegNo);
 
                 if (result.isValid)
                     Console.WriteLine($"{casRegNo} is a valid CAS Registry Number.");

@@ -16,7 +16,7 @@ namespace CASRegistryNo
     /// Validation is based on information pulled on 5/31/2018 from:
     /// http://support.cas.org/content/chemical-substances/checkdig
     /// </remarks>
-    public static class CasRN
+    public static class CasRegNo
     {
         public static (bool isValid, string errorMessage) Validate(string casRegNo)
         {
