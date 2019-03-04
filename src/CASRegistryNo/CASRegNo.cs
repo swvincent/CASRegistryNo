@@ -34,7 +34,6 @@ namespace CASRegistryNo
                 return (false, "incorrect format");
         }
 
-
         private static bool MatchesCasFormat(string casRegNo)
         {
             // Correct CAS number format is 2-7 digits, a dash, two digits,
@@ -45,12 +44,10 @@ namespace CASRegistryNo
                 Regex.IsMatch(casRegNo, @"\b[1-9]{1}[0-9]{1,6}-\d{2}-\d\b");
         }
 
-
         private static int ExtractCheckDigit(string casRegNo)
         {
             return int.Parse(casRegNo.Substring(casRegNo.Length - 1, 1));
         }
-
 
         private static int CalcCheckDigit(string casRegNo)
         {
