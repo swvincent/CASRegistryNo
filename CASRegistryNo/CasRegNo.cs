@@ -2,9 +2,6 @@
 // Shared under an MIT License - see LICENSE file for details
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace CASRegistryNo
