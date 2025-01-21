@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2036
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CASRegistryNo", "src\CASRegistryNo\CASRegistryNo.csproj", "{3CBC50FC-7699-4494-BCEF-05E948C4CE6F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CASRegistryNo.UnitTests", "src\CASRegistryNo.UnitTests\CASRegistryNo.UnitTests.csproj", "{B04F8DCE-2891-43D0-B64F-362E883633C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CASRegistryNoConsoleApp", "CASRegistryNoConsoleApp\CASRegistryNoConsoleApp.csproj", "{3CBC50FC-7699-4494-BCEF-05E948C4CE6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{3CBC50FC-7699-4494-BCEF-05E948C4CE6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CBC50FC-7699-4494-BCEF-05E948C4CE6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CBC50FC-7699-4494-BCEF-05E948C4CE6F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B04F8DCE-2891-43D0-B64F-362E883633C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B04F8DCE-2891-43D0-B64F-362E883633C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B04F8DCE-2891-43D0-B64F-362E883633C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B04F8DCE-2891-43D0-B64F-362E883633C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
