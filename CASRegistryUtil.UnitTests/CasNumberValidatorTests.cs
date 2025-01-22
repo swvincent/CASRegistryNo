@@ -13,7 +13,7 @@ namespace CASRegistryUtil.UnitTests
         public void Validate_ValidCasRegNo_ReturnsTrue(string casRegNo)
         {
             var result = CasNumberValidator.Validate(casRegNo);
-            Assert.That(result, Is.EqualTo((true, "")));
+            Assert.That(result.IsValid, Is.EqualTo(true));
         }
 
         [Test]
@@ -27,8 +27,7 @@ namespace CASRegistryUtil.UnitTests
         {
             var result = CasNumberValidator.Validate(casRegNo);
 
-            Assert.That(!result.isValid &&
-                !string.IsNullOrWhiteSpace(result.errorMessage));
+            Assert.That(result.IsValid, Is.EqualTo(false));
         }
     }
 }

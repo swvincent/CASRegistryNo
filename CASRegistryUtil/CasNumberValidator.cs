@@ -15,7 +15,7 @@ namespace CASRegistryUtil
     /// </remarks>
     public static class CasNumberValidator
     {
-        public static (bool isValid, string errorMessage) Validate(string casRegNo)
+        public static IValidationResult Validate(string casRegNo)
         {
             if (MatchesCasFormat(casRegNo))
             {
@@ -23,12 +23,19 @@ namespace CASRegistryUtil
                 int calcCheckDigit = CalcCheckDigit(casRegNo);
 
                 if (specifiedCheckDigit == calcCheckDigit)
-                    return (true, "");
+                    return new ValidationResult() { IsValid = true };
                 else
-                    return (false, $"incorrect check digit; expected {calcCheckDigit}");
+                    return new ValidationResult() {
+                        IsValid = false,
+                        ValidationMessage = $"Incorrect check digit; expected {calcCheckDigit}"
+                    };
             }
             else
-                return (false, "incorrect format");
+                return new ValidationResult()
+                {
+                    IsValid = false,
+                    ValidationMessage = $"Incorrect format"
+                };
         }
 
         private static bool MatchesCasFormat(string casRegNo)
