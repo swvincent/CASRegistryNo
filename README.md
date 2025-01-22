@@ -1,18 +1,10 @@
-# CAS Registry Number
+# CAS Registry Utility
 
-CAS Registry Numbers (CAS RNs) are unique numerical identifiers assigned to chemical substances. They are managed by the [Chemical Abstracts Service](https://www.cas.org/).
+CAS Registry Numbers (CAS Numbers) are unique numerical identifiers assigned to chemical substances. They are managed by the [Chemical Abstracts Service](https://www.cas.org/).
 
-This project contains the CasRN class I've written to validate CAS RNs by ensuring they're in the correct format and that they contains a valid check digit. It is demonstrated by a simple Console application.
+An example is 58-08-2, which is the CAS Number for Caffeine.
 
-This is the output of the Console application:
-
-```
-58-08-2 is a valid CAS Registry Number.
-58-08-3 is not a valid CAS Registry Number because: incorrect check digit; expected 2.
-5808-3 is not a valid CAS Registry Number because: incorrect format.
-```
-
-I wrote this for C# 7.0 since it uses a Tuple to return the validation result and error message. It could be easily adapted to earlier versions with some minor changes.
+This project contains a class to validate CAS Numbers by ensuring they're in the correct format and that they contains a valid check digit.
 
 ## License
 

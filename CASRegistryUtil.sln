@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CASRegistryNo", "CASRegistryNo\CASRegistryNo.csproj", "{DE412B0B-33D7-4634-989F-F9296269B5AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CASRegistryUtil", "CASRegistryUtil\CASRegistryUtil.csproj", "{DE412B0B-33D7-4634-989F-F9296269B5AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CASRegistryNo.UnitTests", "CASRegistryNo.UnitTests\CASRegistryNo.UnitTests.csproj", "{DE964A04-6C71-4F8A-B149-62A21BC73849}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CASRegistryUtil.UnitTests", "CASRegistryUtil.UnitTests\CASRegistryUtil.UnitTests.csproj", "{DE964A04-6C71-4F8A-B149-62A21BC73849}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
