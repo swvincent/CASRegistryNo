@@ -1,6 +1,8 @@
-﻿namespace CASRegistryNo.UnitTests
+﻿using CASRegistryUtil;
+
+namespace CASRegistryUtil.UnitTests
 {
-    public class CasRegNoTests
+    public class CasNumberValidatorTests
     {
         [Test]
         [TestCase("58-08-2", TestName = "Validate_Caffeine_CasRegNo_ReturnsTrue")]
@@ -10,7 +12,7 @@
         [TestCase("1234567-89-5", TestName = "Validate_MadeUp_CasRegNo_ReturnsTrue")]
         public void Validate_ValidCasRegNo_ReturnsTrue(string casRegNo)
         {
-            var result = CasRegNo.Validate(casRegNo);
+            var result = CasNumberValidator.Validate(casRegNo);
             Assert.That(result, Is.EqualTo((true, "")));
         }
 
@@ -23,7 +25,7 @@
         [TestCase("", TestName = "Validate_CasRegNoEmpty_ReturnsFalseAndErrorMessage")]
         public void Validate_InvalidCasRegNo_ReturnsFalseAndErrorMessage(string casRegNo)
         {
-            var result = CasRegNo.Validate(casRegNo);
+            var result = CasNumberValidator.Validate(casRegNo);
 
             Assert.That(!result.isValid &&
                 !string.IsNullOrWhiteSpace(result.errorMessage));

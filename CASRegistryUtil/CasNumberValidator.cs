@@ -1,19 +1,19 @@
-﻿// Copyright 2018 Scott W. Vincent
+﻿// Copyright 2018, 2025 Scott W. Vincent
 // Shared under an MIT License - see LICENSE file for details
 
 using System;
 using System.Text.RegularExpressions;
 
-namespace CASRegistryNo
+namespace CASRegistryUtil
 {
     /// <summary>
     /// CAS Registry Number validation class
     /// </summary>
     /// <remarks>
-    /// Validation is based on information pulled on 5/31/2018 from:
-    /// http://support.cas.org/content/chemical-substances/checkdig
+    /// Validation is based on information from:
+    /// https://www.cas.org/training/documentation/chemical-substances/checkdig
     /// </remarks>
-    public static class CasRegNo
+    public static class CasNumberValidator
     {
         public static (bool isValid, string errorMessage) Validate(string casRegNo)
         {
@@ -33,18 +33,14 @@ namespace CASRegistryNo
 
         private static bool MatchesCasFormat(string casRegNo)
         {
-            // Correct CAS number format is 2-7 digits, a dash, two digits,
-            // one digit. Can't start with 0. The Reg Ex used comes from
-            // http://regexlib.com/REDetails.aspx?regexp_id=1449
-            // but fixed to accomodate 10-digit CAS numbers, not just 9-digit.
+            // Based on http://regexlib.com/REDetails.aspx?regexp_id=1449
+            // but modified to support 10 digit CAS Numbers
             return !String.IsNullOrEmpty(casRegNo) &&
                 Regex.IsMatch(casRegNo, @"\b[1-9]{1}[0-9]{1,6}-\d{2}-\d\b");
         }
 
-        private static int ExtractCheckDigit(string casRegNo)
-        {
-            return int.Parse(casRegNo.Substring(casRegNo.Length - 1, 1));
-        }
+        private static int ExtractCheckDigit(string casRegNo) =>
+            int.Parse(casRegNo.Substring(casRegNo.Length - 1, 1));
 
         private static int CalcCheckDigit(string casRegNo)
         {
@@ -60,10 +56,9 @@ namespace CASRegistryNo
             {
                 int casDigit = int.Parse(casRegDigits.Substring(counter, 1));
                 int multiplier = casRegDigits.Length - counter;
-                subTotal = subTotal + (casDigit * multiplier);
+                subTotal += (casDigit * multiplier);
             }
 
-            // The remainder of subtotal/10 is the correct check digit.
             return subTotal % 10;
         }
     }
