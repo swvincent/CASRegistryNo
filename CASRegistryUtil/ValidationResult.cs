@@ -6,7 +6,15 @@ namespace CASRegistryUtil
 {
     public class ValidationResult : IValidationResult
     {
-        public bool IsValid { get; set; }
-        public string ValidationMessage { get; set; }
+        public ValidationResult(bool isValid, string validationMessage)
+        {
+            IsValid = isValid;
+            ValidationMessage = validationMessage;
+        }
+
+        public ValidationResult(bool isValid) : this(isValid, null) { }
+
+        public bool IsValid { get; private set; }
+        public string ValidationMessage { get; private set; }
     }
 }

@@ -30,6 +30,8 @@ namespace CASRegistryUtil.UnitTests
             var result = CasNumberValidator.Validate(CasNumber);
 
             Assert.That(result.IsValid, Is.EqualTo(false));
+            Assert.That(result.ValidationMessage, Is.Not.Null);
+            Assert.That(result.ValidationMessage, Is.Not.Empty);
         }
 
         [Test]

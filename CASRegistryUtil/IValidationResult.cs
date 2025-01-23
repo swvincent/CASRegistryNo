@@ -2,7 +2,7 @@
 {
     public interface IValidationResult
     {
-        bool IsValid { get; set; }
-        string ValidationMessage { get; set; }
+        bool IsValid { get; }
+        string ValidationMessage { get; }
     }
 }

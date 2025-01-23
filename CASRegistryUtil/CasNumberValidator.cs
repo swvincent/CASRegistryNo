@@ -29,19 +29,18 @@ namespace CASRegistryUtil
                 int calcCheckDigit = CalcCheckDigit(casNumber);
 
                 if (specifiedCheckDigit == calcCheckDigit)
-                    return new ValidationResult() { IsValid = true };
+                    return new ValidationResult(true);
                 else
-                    return new ValidationResult() {
-                        IsValid = false,
-                        ValidationMessage = $"Incorrect check digit; expected {calcCheckDigit}"
-                    };
+                    return new ValidationResult(
+                        false,
+                        $"Incorrect check digit; expected {calcCheckDigit}"
+                    );
             }
             else
-                return new ValidationResult()
-                {
-                    IsValid = false,
-                    ValidationMessage = $"Incorrect format"
-                };
+                return new ValidationResult(
+                    false,
+                    $"Incorrect CAS Number format"
+                );
         }
 
         /// <summary>
