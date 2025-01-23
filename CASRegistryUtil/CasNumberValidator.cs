@@ -15,12 +15,18 @@ namespace CASRegistryUtil
     /// </remarks>
     public static class CasNumberValidator
     {
-        public static IValidationResult Validate(string casRegNo)
+
+        /// <summary>
+        /// Validate CAS Number.
+        /// </summary>
+        /// <param name="casNumber">CAS Number to validate</param>
+        /// <returns>Validation Result</returns>
+        public static IValidationResult Validate(string casNumber)
         {
-            if (MatchesCasFormat(casRegNo))
+            if (MatchesCasFormat(casNumber))
             {
-                int specifiedCheckDigit = ExtractCheckDigit(casRegNo);
-                int calcCheckDigit = CalcCheckDigit(casRegNo);
+                int specifiedCheckDigit = ExtractCheckDigit(casNumber);
+                int calcCheckDigit = CalcCheckDigit(casNumber);
 
                 if (specifiedCheckDigit == calcCheckDigit)
                     return new ValidationResult() { IsValid = true };
@@ -37,6 +43,14 @@ namespace CASRegistryUtil
                     ValidationMessage = $"Incorrect format"
                 };
         }
+
+        /// <summary>
+        /// Validate CAS Number.
+        /// </summary>
+        /// <param name="casNumber">CAS Number to validate</param>
+        /// <returns>True if valid, false if not</returns>
+        public static bool IsValid(string casNumber) =>
+            Validate(casNumber).IsValid;
 
         private static bool MatchesCasFormat(string casRegNo)
         {
