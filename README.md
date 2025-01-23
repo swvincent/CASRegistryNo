@@ -4,7 +4,18 @@ CAS Registry Numbers (CAS Numbers) are unique numerical identifiers assigned to 
 
 An example is 58-08-2, which is the CAS Number for Caffeine.
 
-This project contains a class to validate CAS Numbers by ensuring they're in the correct format and that they contains a valid check digit.
+This package contains a class to validate CAS Numbers by ensuring they're in the correct format and that they contains a valid check digit.
+
+## Usage
+
+```
+// Get Simple true/false result
+bool result = CasNumberValidator.IsValid("58-08-2");
+
+// Get Validation Result object which contains
+// a message with details if validation failed
+IValidationResult = CasNumberValidator.Validate("58-08-2");
+```
 
 ## License
 
